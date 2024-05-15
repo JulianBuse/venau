@@ -26,7 +26,7 @@ async fn main() {
     let mut ts = Tailscale::new();
     ts.set_ephemeral(true).expect("There was an error setting the node ephemeral state");
     ts.set_hostname("proxy").expect("There was an error setting the node hostname");
-    ts.set_authkey("authkey").expect("There was an error setting the node authkey");
+    // ts.set_authkey("authkey").expect("There was an error setting the node authkey");
     ts.set_logfd(-1).expect("There was an error setting node loglevel");
     ts.up().expect("There was an error getting the node connected to the tailscale network");
 
